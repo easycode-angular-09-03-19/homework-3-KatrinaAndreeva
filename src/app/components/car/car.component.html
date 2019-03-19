@@ -1,0 +1,26 @@
+<div>
+    <h3>The model is : {{ name }}</h3>
+</div>
+<div>
+    <h4>Main characteristics:</h4>
+    <ul>
+        <li>Fuel Tank Volume: {{ fuelTankVolume }}</li>
+        <li>Mileage: {{ mileage }}</li>
+        <li>Current Fuel: {{ currentFuel }}</li>
+    </ul>
+</div>
+<div>
+    <h4>Get extra information</h4>
+    <ul>
+        <li>{{ otherInfo }}</li>
+    </ul>
+</div>
+
+
+<div id="drive">
+    <button class="drive" *ngIf="currentFuel > 0" (click)="onClickDriveHandler()">Drive</button>
+</div>
+
+<div id="refuel">
+    <button id="refuel" *ngIf="currentFuel < 1" (click)="onClickRefuelHandler()">Refuel</button>
+</div>
