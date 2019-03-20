@@ -17,19 +17,19 @@ export class CarComponent implements CarInter {
 
   constructor() {}
 
-public drive(): void {
+  public drive(): void {
   this.mileage += 10;
   this.currentFuel -= 1;
 }
 
-public refuel():void {
+  public refuel(): void {
   this.currentFuel += 10;
 }
-public onClickDriveHandler(): void {
+  public onClickDriveHandler(): void {
   this.drive();
 }
 
-public onClickRefuelHandler(): void {
+  public onClickRefuelHandler(): void {
   this.refuel();
 }
 }
